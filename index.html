@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="ie=edge" http-equiv="x-ua-compatible" />
+        <title>Restaurant Reviews</title>
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="prefetch stylesheet" />
+        <link href="/css/main.css" rel="stylesheet" />
+    </head>
+    <body class="body">
+        <header class="body__header" role="banner">
+            <h1 class="body__header__h1">Restaurant Reviews</h1>
+        </header>
+        <main class="body__main" role="main">
+            <section aria-label="Google Maps" class="body__main__section" role="region">
+                <div class="body__main__section__div"></div>
+            </section>
+            <section aria-label="Restaurant List" class="body__main__section" role="region">
+                <h2 class="body__main__section__h2">Filter Results</h2>
+                <form class="body__main__section__form">
+                    <select class="body__main__section__form__select">
+                        <option class="body__main__section__form__select__option" value="all">All Neighborhoods</option>
+                    </select>
+                    <select class="body__main__section__form__select">
+                        <option class="body__main__section__form__select__option" value="all">All Cuisines</option>
+                    </select>
+                </form>
+                <h2 class="body__main__section__h2">Available Restaurant</h2>
+                <ul class="body__main__section__ul"></ul>
+            </section>
+        </main>
+        <footer class="body__footer" role="contentinfo">
+            <p class="body__footer__p"><small class="-small">© <time>2018</time> <a class="body__footer__p__a" href="https://federicomoretti.it/" rel="noopener" target="_blank">Federico Moretti</a>. Some rights reserved. Released under <a class="body__footer__p__a" href="/LICENSE" rel="license">a <abbr class="-abbr" title="Massachusetts Institute of Technology">MIT</abbr> license</a>.</small></p>
+        </footer>
+        <script src="/js/dbhelper.js"></script>
+        <script src="/js/main.js"></script>
+        <script src="/sw.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;callback=initMap"></script>
+    </body>
+</html>

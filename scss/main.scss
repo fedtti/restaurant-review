@@ -1,0 +1,195 @@
+/**
+ * Import “Open Sans” and “Raleway” from Google Fonts.
+ */
+@import "partials/fonts";
+
+/**
+ * Define global variables.
+ */
+$blackcurrant: #2f2a3d;
+$carnation: #f24351;
+$grey-nurse: #f9faf9;
+$mountain-mist: #9c90a0;
+
+$black: #000;
+$white: #fff;
+
+/**
+ * Set default styles.
+ */
+.body {
+    background: $grey-nurse;
+    color: $blackcurrant;
+    font: 400 1rem/1 "Open Sans", sans-serif;
+
+    &__header {
+        background: $blackcurrant;
+        color: $grey-nurse;
+        box-shadow: 0 0.125rem 0.25rem rgba($blackcurrant, 0.5);
+        left: 0;
+        padding: 1.5rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+
+        &__h1 {
+            font-family: "Raleway", sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+    }
+
+    &__main {
+        &__section {
+            &__h2 {
+                font-family: "Raleway", sans-serif;
+                font-size: 1.25rem;
+                font-weight: 700;
+                margin: 0;
+                padding: 1rem;
+            }
+
+            &__img {
+                max-width: calc(100% - 2rem);
+                padding: 0 1rem 1rem 1rem;
+                transition: width 0.5s linear;
+            }
+
+            &__p {
+                line-height: 1.5;
+                margin: 0;
+                padding: 0 1rem 1rem 1rem;
+            }
+
+            &__table {
+                line-height: 1.5;
+                margin: 0;
+                padding: 0 1rem;
+            }
+
+            &__h3 {
+                font-family: "Raleway", sans-serif;
+                font-size: 1.125rem;
+                font-weight: 700;
+                margin: 0;
+                padding: 1rem 1rem 0 1rem;
+            }
+
+            &__div {
+                height: 75vh;
+                width: 100%;
+            }
+
+            &__form {
+                padding: 0 1rem;
+
+              &__select {
+              }
+            }
+
+            &__ul {
+                margin: 0;
+                padding: 0 1rem;
+
+                &__li {
+                    list-style: none;
+                    padding: 0 0 1rem 0;
+
+                    &__h3 {
+                        font-family: "Raleway", sans-serif;
+                        font-size: 1.125rem;
+                        font-weight: 700;
+                        margin: 0;
+                        padding: 0 0 1rem 0;
+                    }
+
+                    &__img {
+                        max-width: 100%;
+                        transition: width 0.5s linear;
+                    }
+
+                    &__p {
+                        line-height: 1.5;
+                        margin: 0;
+                        padding: 1rem 0 0 0;
+                    }
+
+                    &__a {
+                        background: $mountain-mist;
+                        border-radius: 0.25rem;
+                        color: $grey-nurse;
+                        display: inline-block;
+                        margin: 1rem 0 0 0;
+                        padding: 0.5rem;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+
+        &__nav {
+            &__ul {
+                margin: 0;
+                padding: 1rem 1rem 0 1rem;
+
+                &__li {
+                    display: inline;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0 0.5rem 0 0;
+                    text-transform: uppercase;
+
+                    &::after {
+                        content: "›";
+                        padding: 0 0 0 0.5rem;
+                    }
+
+                    &:last-child {
+                        padding: 0;
+
+                        &::after {
+                            content: "";
+                        }
+                    }
+
+                    &__a {
+                      color: $mountain-mist;
+                      text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__footer {
+        margin: 0 auto;
+        padding: 0 1rem 1rem 1rem;
+        text-align: center;
+
+        &__p {
+            margin: 0;
+            text-transform: uppercase;
+
+            &__a {
+                color: $mountain-mist;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/**
+ *
+ */
+.-abbr {
+    border-bottom: 0.0625rem dashed $carnation !important; // Override Normalize.css
+    cursor: help;
+    text-decoration: none !important;                      // Override Normalize.css
+}
+
+.-small {
+    font-size: 0.75rem;
+}
