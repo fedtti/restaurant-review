@@ -148,7 +148,7 @@ let createRestaurantHTML = restaurant => {
 
     const IMAGE = document.createElement("img");
     IMAGE.className = "body__main__section__ul__li__img";
-    IMAGE.setAttribute('alt', restaurant.name);
+    IMAGE.setAttribute('alt', `Image of ${restaurant.name} in ${restaurant.neighborhood}`);
     IMAGE.src = DBHelper.imageUrlForRestaurant(restaurant);
     LI.append(IMAGE);
 

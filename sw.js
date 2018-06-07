@@ -43,7 +43,7 @@ self.addEventListener("install", event => {
 });
 
 self.addEventListener("fetch", event => {
-    if (event.request.url.startsWith(self.location.origin)) {
+    if (event.request.cache === "only-if-cached" && event.request.mode !== "same-origin") {
         event.respondWith(
             caches.match(event.request).then(response => {
                 if (response) {

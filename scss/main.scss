@@ -193,3 +193,23 @@ $white: #fff;
 .-small {
     font-size: 0.75rem;
 }
+
+@media (min-width: 833px) {
+    .body {
+        &__main {
+            &__section {
+                &__img {
+                    width: calc(100% - 2rem);
+                }
+
+                &__ul {
+                    &__li {
+                        &__img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -4,10 +4,10 @@
  */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:700);
 /**
- *
+ * Define global variables.
  */
 /**
- *
+ * Set default styles.
  */
 .body {
   background: #f9faf9;
@@ -141,7 +141,7 @@
 }
 
 /**
- *
+ * Set default variations.
  */
 .-abbr {
   border-bottom: 0.0625rem dashed #f24351 !important;
@@ -151,4 +151,13 @@
 
 .-small {
   font-size: 0.75rem;
+}
+
+@media (min-width: 833px) {
+  .body__main__section__img {
+    width: calc(100% - 2rem);
+  }
+  .body__main__section__ul__li__img {
+    width: 100%;
+  }
 }
