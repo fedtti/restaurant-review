@@ -128,9 +128,16 @@ let resetRestaurants = restaurants => {
  */
 let fillRestaurantsHTML = (restaurants = self.restaurants) => {
     const UL = document.getElementsByClassName("body__main__section__ul")[0];
-    restaurants.forEach(restaurant => {
-        UL.append(createRestaurantHTML(restaurant));
-    });
+    if (restaurants.length !== 0) {
+        restaurants.forEach(restaurant => {
+            UL.append(createRestaurantHTML(restaurant));
+        });
+    } else {
+        const LI = document.createElement("li");
+        LI.className = "body__main__section__ul__li -flex-item";
+        LI.innerHTML = "Sorry, no available restaurants."
+        UL.append(LI);
+    }
     addMarkersToMap();
 };
 
@@ -139,7 +146,7 @@ let fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 let createRestaurantHTML = restaurant => {
     const LI = document.createElement("li");
-    LI.className = "body__main__section__ul__li";
+    LI.className = "body__main__section__ul__li -flex-item";
 
     const NAME = document.createElement("h3");
     NAME.className = "body__main__section__ul__li__h3";
@@ -148,7 +155,7 @@ let createRestaurantHTML = restaurant => {
 
     const IMAGE = document.createElement("img");
     IMAGE.className = "body__main__section__ul__li__img";
-    IMAGE.setAttribute('alt', `Image of ${restaurant.name} in ${restaurant.neighborhood}`);
+    IMAGE.setAttribute('alt', `Image of ${restaurant.name} Restaurant in ${restaurant.neighborhood}`);
     IMAGE.src = DBHelper.imageUrlForRestaurant(restaurant);
     LI.append(IMAGE);
 

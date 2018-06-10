@@ -19,6 +19,6 @@ Once you installed all the prerequisites, open a terminal emulator and execute t
 ```
 git clone https://github.com/fedtti/restaurant-review
 cd restaurant-review/
-npm i http-server -g
-http-server -c-1
+npm i -g http-server
+http-server &
 ```
